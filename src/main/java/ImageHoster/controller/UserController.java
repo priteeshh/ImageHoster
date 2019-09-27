@@ -43,11 +43,7 @@ public class UserController {
     //This method calls the business logic and after the user record is persisted in the database, directs to login page
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user,Model model) {
-        //final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]))";
-        final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-zA-Z])(?=.*[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?]).{3,20})";
-        Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
-        Matcher matcher = pattern.matcher(user.getPassword());
-        if(matcher.matches()){
+        if(userService.passwordValidator(user.getPassword())){
             userService.registerUser(user);
             return "redirect:/users/login";
         }else {
