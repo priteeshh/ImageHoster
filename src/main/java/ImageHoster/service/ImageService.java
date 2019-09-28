@@ -47,12 +47,5 @@ public class ImageService {
         imageRepository.deleteImage(imageId);
     }
 
-    public void addComment(Comment newComment){
-        imageRepository.addComment(newComment);
-    }
-
-    public List<Comment> getAllComments(Integer imageId){
-        return imageRepository.getAllComments(imageId);
-    }
 
 }

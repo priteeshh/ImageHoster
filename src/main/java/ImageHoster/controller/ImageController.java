@@ -4,6 +4,7 @@ import ImageHoster.model.Comment;
 import ImageHoster.model.Image;
 import ImageHoster.model.Tag;
 import ImageHoster.model.User;
+import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public class ImageController {
 
     @Autowired
     private TagService tagService;
+
+    @Autowired
+    private CommentService commentService;
 
     //This method displays all the images in the user home page after successful login
     @RequestMapping("images")
@@ -52,7 +56,7 @@ public class ImageController {
         Image image = imageService.getImage(id);
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
-        List<Comment> comments = imageService.getAllComments(image.getId());
+        List<Comment> comments = commentService.getAllComments(image.getId());
         model.addAttribute("comments",comments);
         return "images/image";
     }
@@ -111,7 +115,7 @@ public class ImageController {
         }else{
             model.addAttribute("image", image);
             model.addAttribute("tags", image.getTags());
-            List<Comment> comments = imageService.getAllComments(image.getId());
+            List<Comment> comments = commentService.getAllComments(image.getId());
             model.addAttribute("comments",comments);
             String error = "Only the owner of the image can edit the image";
             model.addAttribute("editError", error);
@@ -167,25 +171,12 @@ public class ImageController {
         }else{
             model.addAttribute("image", image);
             model.addAttribute("tags", image.getTags());
-            List<Comment> comments = imageService.getAllComments(image.getId());
+            List<Comment> comments = commentService.getAllComments(image.getId());
             model.addAttribute("comments",comments);
             String error = "Only the owner of the image can delete the image";
             model.addAttribute("deleteError", error);
             return "images/image";
         }
-    }
-
-    @RequestMapping(value = "/image/{imageId}/{imageTitle}/comments", method = RequestMethod.POST)
-    public String submitComment(@PathVariable Integer imageId, @PathVariable String imageTitle,@RequestParam(name = "comment") String newComment, HttpSession session, Model model) {
-        Image image = imageService.getImage(imageId);
-        User user = (User) session.getAttribute("loggeduser");
-        Comment addComment = new Comment();
-        addComment.setImage(image);
-        addComment.setText(newComment);
-        addComment.setCreatedDate(new Date());
-        addComment.setUser(user);
-        imageService.addComment(addComment);
-        return "redirect:/images/" + image.getId() +"/"+ image.getTitle();
     }
 
 
