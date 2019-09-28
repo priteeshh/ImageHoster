@@ -1,5 +1,6 @@
 package ImageHoster.service;
 
+import ImageHoster.model.Comment;
 import ImageHoster.model.Image;
 import ImageHoster.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,14 @@ public class ImageService {
     //The method calls the deleteImage() method in the Repository and passes the Image id of the image to be deleted in the database
     public void deleteImage(Integer imageId) {
         imageRepository.deleteImage(imageId);
+    }
+
+    public void addComment(Comment newComment){
+        imageRepository.addComment(newComment);
+    }
+
+    public List<Comment> getAllComments(Integer imageId){
+        return imageRepository.getAllComments(imageId);
     }
 
 }

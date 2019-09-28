@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageHoster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images/image.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +156,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>98</line>
+          <line>101</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
