@@ -34,6 +34,7 @@ public class UserService {
             return null;
         }
     }
+
     public boolean passwordValidator(String password){
         final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-zA-Z])(?=.*[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?]).{3,20})";
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);

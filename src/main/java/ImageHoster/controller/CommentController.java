@@ -24,6 +24,8 @@ public class CommentController {
     @Autowired
     private ImageService imageService;
 
+    //This method is called we want to submit the comment
+    //This will take the comment from @RequestPram and call the addComment service to add the comment to the image to DB
     @RequestMapping(value = "/image/{imageId}/{imageTitle}/comments", method = RequestMethod.POST)
     public String submitComment(@PathVariable Integer imageId, @PathVariable String imageTitle, @RequestParam(name = "comment") String newComment, HttpSession session, Model model) {
         Image image = imageService.getImage(imageId);

@@ -111,6 +111,7 @@ public class ImageRepository {
         }
     }
 
+    //This method is used to add comment of image to DB
     public Comment addComment(Comment newComment){
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
@@ -125,6 +126,7 @@ public class ImageRepository {
         return newComment;
     }
 
+    //This method is used to get all the comments form DB for a particular image
     public List<Comment> getAllComments(Integer imageId){
         try{
             EntityManager em = emf.createEntityManager();
